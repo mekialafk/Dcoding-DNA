@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DECODING DNA APPLICATION</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<META http-equiv="Content-Style-Type" content="text/css">
+
+<!--	<script src="jquery-1.6.1.js"></script>
+  	<script src="my_jquery.js"></script>-->
+	<script>
+
+	</script>
+	<script LANGUAGE="JavaScript">
+	</script>
+	<style>
+		</style>
+	<script>
+	var x;
+		function runGame(){
+				timer.start(1000);
+				colorBoard();
+				var x = Math.floor(Math.random()*4);
+				timer.start(1000);
+			}
+		function colorBoard(){
+			console.log(x);
+			for(var j = 0; j<33; j++){
+				var boardID = "r"+0+"c"+j;
+				x = Math.floor(Math.random()*4);
+				console.log(boardID);
+				if(x==0){
+					document.getElementById(boardID).style.background = "green";
+				}
+				if(x==1){
+					document.getElementById(boardID).style.background = "yellow";
+				}
+				if(x==2){
+					document.getElementById(boardID).style.background = "blue";
+				}
+				if(x==3){
+					document.getElementById(boardID).style.background = "red";
+				}
+			}
+	}
+/*	function Accurate(){
+				console.log("pleaseletthiswork!");
+				if(($('#options').val())=="0"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="2"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="3"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="4"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="5"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="6"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="7"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="8"){
+					console.log("thisworks")
+				}
+				if(($('#options').val())=="9"){
+					console.log("thisworks")
+				}
+		}*/
+/*		function RightorWrong(){
+				var boardID = "r"+0+"c"+j;
+				for (var j = 0; j<33; j++){
+				if ($('#options').val()=1 && 
+			}*/
+
+		function transcriptiontime2(){
+			console.log("transcriptionnow");
+			window.location.href = 'file:///C:/Users/GWC26/Downloads/Decoding%20DNA%20App%20(4)#transcriptionpage';
+			var letter = Math.floor(Math.random()*4);
+			var randomlist = [];
+		}
+
+		function transcriptiontime(){
+			console.log("transcriptionnow");
+			window.location.href = '#transcriptionpage';
+			var letter = Math.floor(Math.random()*4);
+			var randomlist = [];
+		}
+
+		var j = 0;
+		function keyPress(e){
+				var boardID = "r"+0+"c"+j;
+				if (e.keyCode==65 && document.getElementById(boardID).style.background == "green"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==65 && document.getElementById(boardID).style.background !== "green"){
+					console.log("no");
+					alert("No,try again!");
+					j=j+1
+				}
+				else if (e.keyCode==67 && document.getElementById(boardID).style.background == "red"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==67 && document.getElementById(boardID).style.background !== "red"){
+					console.log("no");
+					alert("No,try again!");
+					j=j+1
+				}
+				else if (e.keyCode==71 && document.getElementById(boardID).style.background == "yellow"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==71 && document.getElementById(boardID).style.background !== "yellow"){
+					console.log("no");
+					alert("No,try again!");
+					j=j+1
+				}
+				else if (e.keyCode==84 && document.getElementById(boardID).style.background == "blue"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==84 && document.getElementById(boardID).style.background !== "blue"){
+					console.log("no");
+					alert("No,try again!");
+					j=j+1;
+				}
+				else if (e.keyCode==8){
+					j=j-1;
+					boardID = "r"+0+"c"+j;
+				}
+			if(j==33){
+				alert("Great Job! Time to Move Onto Transcription!");
+				transcriptiontime2();
+				this.stop();
+				var j = 0;
+			}
+		}
+
+		
+
+	</script>
+</head>
+<body onload="runGame()" onkeydown = "keyPress(event)"> 
+
+<div data-role = "page" id = "home">
+	<!--<body onload="runGame()" onkeydown = "keyPress(event)"> -->
+		<center>
+			<img src ="decoding.png" width="500"/>
+			<br>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:33%;">
+		<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;text-align:center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/dna_zps2116a135.png" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" /><img alt="" src="http://data2.whicdn.com/images/127704747/large.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" /><img alt="" src="http://data3.whicdn.com/images/4697277/large.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" /><img alt="" src="http://data3.whicdn.com/images/97255708/large.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;"/></p>
+			<div>&nbsp;</div>
+		<div style="margin-top:-10px;margin:0px 0px -10px;padding:0px;border:0px;font:inherit;vertical-align:baseline;text-align:justify;"><span style="line-height:0;vertical-align:super;font-size:10px;letter-spacing:3px;font-family:'times new roman', times, serif;color:rgb(27,4,12);">&nbsp;&nbsp;</span></div>
+		<p style="text-align:justify;margin:0px 0px 0px -10px;"><span style="color:#000000;"><span style="font-family:courier new;"><span style="font-size:11px;letter-spacing:1px;line-height:13px;">Evolution is the change in the inherited characteristics of biological populations over successive generations. Evolutionary processes give rise to diversity at every level of biological organisation, including species, individual organisms and molecules such as DNA and proteins. DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms. Nearly every cell in a body has the same DNA. They are the key to unlocking the past, present, and future.</span></span></span></p>
+		<p><span style="letter-spacing: -1px; text-align: center; text-transform: uppercase; line-height: 1.6; color: rgb(204, 204, 204); background-color: transparent;">
+
+		<a href = "#play" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/learn_zpsa9646708.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a></span>
+
+		<a href = "#learn" onclick="timer.reset(0);"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/play_zpsb591c676.png" style="letter-spacing: -1px; text-align: center; text-transform: uppercase; line-height: 1.6; color: rgb(204, 204, 204); width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px; background-color: transparent;"/></a></p>
+		</center>
+
+
+			</div>
+		</div>
+</div>
+
+<div data-role = "page" id = "play">
+		<script>
+			// function RightorWrong(){
+			// 	var boardID = "r"+0+"c"+j;
+			// 	for (var j = 0; j<33; j++){
+			// 		if ($('#options').val()=1 && 
+			// 	}
+			// }
+
+		function myFunction() {
+    	alert("No, press backspace and try again!");
+    }
+   
+
+	
+		var x;
+		function runGame(){
+				timer.start(1000);
+				colorBoard();
+				var x = Math.floor(Math.random()*4);
+				timer.start(1000);
+			}
+		function colorBoard(){
+			console.log(x);
+			for(var j = 0; j<33; j++){
+				var boardID = "r"+0+"c"+j;
+				x = Math.floor(Math.random()*4);
+				console.log(boardID);
+				if(x==0){
+					document.getElementById(boardID).style.background = "green";
+				}
+				if(x==1){
+					document.getElementById(boardID).style.background = "yellow";
+				}
+				if(x==2){
+					document.getElementById(boardID).style.background = "blue";
+				}
+				if(x==3){
+					document.getElementById(boardID).style.background = "red";
+				}
+			}
+		}
+
+
+/*		function keyPress(e){
+				var boardID1 = "r"+0+"c"+d;
+				var boardID2 = "r"+0+"c"+(d+1);
+				var boardID3 = "r"+0+"c"+(d+2);
+				console.log(e.keyCode);
+				if (e.keyCode==49 && document.getElementById(boardID1).style.background == "blue" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "blue"){
+						console.log("yes");
+						alert("Yes, the amino acid is lysine!");
+				}
+				else if (e.keyCode==49 && document.getElementById(boardID1).style.background !== "gray" && document.getElementById(boardID2).style.background !== "gray" && document.getElementById(boardID3).style.background !== "gray"){
+					console.log("no");
+					alert("No, the amino acid is not lysine!");
+				}
+			}*/
+	var j = 0;
+	var d = 33;
+		function keyPress(e){
+				var boardID = "r"+0+"c"+j;
+				var boardID1 = "r"+0+"c"+d;
+				var boardID2 = "r"+0+"c"+(d+1);
+				var boardID3 = "r"+0+"c"+(d+2);
+				console.log(e.keyCode);
+				if (e.keyCode==65 && document.getElementById(boardID).style.background == "green"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==65 && document.getElementById(boardID).style.background !== "green"){
+					console.log("no");
+					/*window.alert("try again!");*/
+					
+					
+				
+					myFunction();
+					j=j+1
+				}
+				else if (e.keyCode==67 && document.getElementById(boardID).style.background == "red"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==67 && document.getElementById(boardID).style.background !== "red"){
+					console.log("no");
+					/*window.alert("try again!");*/
+					
+					myFunction();
+					j=j+1
+				}
+				else if (e.keyCode==71 && document.getElementById(boardID).style.background == "yellow"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==71 && document.getElementById(boardID).style.background !== "yellow"){
+					console.log("no");
+					/*window.alert("try again!");*/
+					
+					myFunction();
+					j=j+1
+				}
+				else if (e.keyCode==84 && document.getElementById(boardID).style.background == "blue"){
+					document.getElementById(boardID).style.background = "lightsteelblue";
+					console.log("yes");
+					j=j+1;
+					boardID = "r"+0+"c"+j;
+					console.log(boardID);
+				}
+				else if (e.keyCode==84 && document.getElementById(boardID).style.background !== "blue"){
+					console.log("no");
+					/*window.alert("try again!");*/
+					myFunction();
+					
+					j=j+1;
+				}
+				else if (e.keyCode==8){
+					j=j-1;
+					boardID = "r"+0+"c"+j;
+				}
+			if(j==33){
+				alert("Great Job! Time to Move Onto Transcription!");
+				transcriptiontime();
+				this.stop();
+			}
+			var c;
+			console.log(e.keyCode);
+				if (e.keyCode==49 && document.getElementById(boardID1).style.background == "blue" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "blue"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 1;
+						console.log(c);
+				}
+				else if (e.keyCode==49){
+					console.log("no1");
+					alert("No, the amino acid is not lysine!");
+				}
+				if (e.keyCode==50 && document.getElementById(boardID1).style.background == "blue" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "green"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 2;
+						console.log(c);
+				}
+				else if (e.keyCode==50){
+					console.log("no1");
+					alert("No, the amino acid is not asparagine!");
+				}
+				if (e.keyCode==51 && document.getElementById(boardID1).style.background == "blue" && document.getElementById(boardID2).style.background == "yellow" && document.getElementById(boardID3).style.background == "green"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 3;
+						console.log(c);
+				}
+				else if (e.keyCode==51){
+					console.log("no1");
+					alert("No, the amino acid is not threonine!");
+				}
+				if (e.keyCode==52 && document.getElementById(boardID1).style.background == "blue" && document.getElementById(boardID2).style.background == "green" && document.getElementById(boardID3).style.background == "green"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 4;
+						console.log(c);
+				}
+				else if (e.keyCode==52){
+					console.log("no1");
+					alert("No, the amino acid is not isoleucine!");
+				}
+				if (e.keyCode==53 && document.getElementById(boardID1).style.background == "yellow" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "green"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 5;
+						console.log(c);
+				}
+				else if (e.keyCode==53){
+					console.log("no1");
+					alert("No, the amino acid is not histidine!");
+				}
+				if (e.keyCode==54 && document.getElementById(boardID1).style.background == "red" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "red"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 6;
+						console.log(c);
+				}
+				else if (e.keyCode==54){
+					console.log("no1");
+					alert("No, the amino acid is not glutamic acid!");
+				}
+				if (e.keyCode==55 && document.getElementById(boardID1).style.background == "red" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "green"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 7;
+						console.log(c);
+				}
+				else if (e.keyCode==55){
+					console.log("no1");
+					alert("No, the amino acid is not aspartic acid!");
+				}
+				if (e.keyCode==56 && document.getElementById(boardID1).style.background == "red" && document.getElementById(boardID2).style.background == "yellow" && document.getElementById(boardID3).style.background == "red"){
+						console.log("yes1");
+						alert("Yes, good job!");
+						location.reload(false);
+						c = 8;
+						console.log(c);
+				}
+				else if (e.keyCode==56){
+					console.log("no1");
+					alert("No, the amino acid is not alanine!");
+				}
+				else if (e.keyCode==57 && c !== 1 && c !== 2 && c !== 3 && c !== 4 && c !== 5 && c !== 6 && c !== 7 && c !== 8){
+					console.log("nocorrectoption");
+					location.reload(false);
+					var c;
+				}
+		}
+
+	 	</script>
+	<style>
+			html, body {
+			  margin: 0;
+			  padding: 10px;
+			  background: #faf8ef;
+			  color: #ffffff;
+			  font-weight: bolder;
+			}
+
+
+
+			.grid-container {
+			  position: absolute;
+			  z-index: 1; 
+			}
+
+			.grid-row {
+			  margin-bottom: 15px; 
+			}
+
+  			.grid-row:last-child {
+    			margin-bottom: 0; 
+			}	
+
+			.grid-row:after {
+				content: "";
+			    display: block;
+			    clear: both;
+			}
+
+			.grid-cell {
+			  width: 35px;
+			  height: 35px;
+			  margin-right: 8px;
+			  float: left;
+			  border-radius: 3px;
+			  text-align: center;
+			  background:#C8CACB; 
+
+			}
+
+			.grid-cell:last-child {
+			    margin-right: 0; 
+			}
+
+			.game {
+				  margin-top: -175px;
+				  position: relative;
+				  padding: 8px;
+				  cursor: default;
+				  background: #494E53;
+				  border-radius: 6px;
+				  width: 1433px;
+				  height: 51px;
+				  -webkit-box-sizing: border-box;
+				  -moz-box-sizing: border-box;
+				  box-sizing: border-box; 
+			}
+		</style>
+		<body onload="runGame();" onkeydown = "keyPress(event)"/> 
+		<div data-role = "content">
+			<div align="center">
+
+			<div style="margin-top: 0px; margin-left: 0px; text-align: center; margin-right:0px"><strong style="font-family:'courier new';color:#1F1F2E;"><span style="font-size:60px;letter-spacing:-3px;">decoding dna.</span></strong></div>
+			<div style="margin-top: -40px; margin-left: 0px; text-align: center; margin-right:0px"><strong style="font-family:'courier new';color:#9999cc;"><span style="font-size:60px;letter-spacing:-3px;">decoding dna.</span></strong></div>
+			</div>
+			<br>
+			<p style="text-align: center;margin-top:-20px;"><span style="color:#808080;"><span style="font-size:28px;">------------------------------------------------------------------------</span></span><br style="text-align: center;" />
+			<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;text-align:center;">
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/letterp1_zps3fde4fc5.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" />
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/letterl1_zps7edc50ca.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" />
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/tumblr_lshft8VSJ21qh0381o1_500_zpsf89889a8.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" />
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/large1_zps5685100e.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;"/></p>
+		&nbsp;</center>
+		<center>
+		<a href = "#help2"><img src = "help.png"></a>
+		<br>
+		<br>
+		</center>
+
+			<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;"></p>
+		<p style="text-align: center; margin-top:-5px"><span style="font-family:courier new;"><span style="font-size:30px;">STRING OF DNA</span></span></p>
+
+		
+		<p style="text-align: center; margin-left: 250px;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/Key_zps9131e01d.png" style="width: 345px; height: 88px; position: absolute; z-index:1" /></p>
+
+		<p>&nbsp;</p>
+
+		<p style="text-align: center; margin-top:-45px;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/Untitled_zpsa7fd1e15.png" style="width: 700px; height: 347px; position: relative; -index:2" /></p>
+
+		<script>
+		function placeimage(){
+            /*$('#div').append('<img src="lost.jpg" alt="image" id="'. Math.floor(Math.random()*55) .'" onclick="doclick(this.id);">');*/
+            setTimeout(placeimage, 2000);
+        }
+        placeimage();
+		</script>
+			<div align="center">
+			<div class="game">
+			<div class="grid-container">
+		        <div class="grid-row">
+		          <div class="grid-cell" id = "r0c0"></div>
+		          <div class="grid-cell" id = "r0c1"></div>
+		          <div class="grid-cell" id = "r0c2"></div>
+		          <div class="grid-cell" id = "r0c3"></div>
+		          <div class="grid-cell" id = "r0c4"></div>
+		          <div class="grid-cell" id = "r0c5"></div>
+		          <div class="grid-cell" id = "r0c6"></div>
+		          <div class="grid-cell" id = "r0c7"></div>
+		          <div class="grid-cell" id = "r0c8"></div>
+		          <div class="grid-cell" id = "r0c9"></div>
+		          <div class="grid-cell" id = "r0c10"></div>
+		          <div class="grid-cell" id = "r0c11"></div>
+		          <div class="grid-cell" id = "r0c12"></div>
+		          <div class="grid-cell" id = "r0c13"></div>
+		          <div class="grid-cell" id = "r0c14"></div>
+		          <div class="grid-cell" id = "r0c15"></div>
+		          <div class="grid-cell" id = "r0c16"></div>
+		          <div class="grid-cell" id = "r0c17"></div>
+		          <div class="grid-cell" id = "r0c18"></div>
+		          <div class="grid-cell" id = "r0c19"></div>
+		          <div class="grid-cell" id = "r0c20"></div>
+		          <div class="grid-cell" id = "r0c21"></div>
+		          <div class="grid-cell" id = "r0c22"></div>
+		          <div class="grid-cell" id = "r0c23"></div>
+		          <div class="grid-cell" id = "r0c24"></div>
+		          <div class="grid-cell" id = "r0c25"></div>
+		          <div class="grid-cell" id = "r0c26"></div>
+		          <div class="grid-cell" id = "r0c27"></div>
+		          <div class="grid-cell" id = "r0c28"></div>
+		          <div class="grid-cell" id = "r0c29"></div>
+		          <div class="grid-cell" id = "r0c30"></div>
+		          <div class="grid-cell" id = "r0c31"></div>
+		          <div class="grid-cell" id = "r0c32"></div>
+		        </div>
+	      	</div>
+	      </div>
+	     </div>
+<!-- 	     </div> -->
+	 	</center>
+	 	<br>
+	 	<br>
+	 	<br>
+	 	<br>
+		<!-- </div> -->
+		<center>
+			<br>
+	      	<form>
+			<b>ENTER TRANSLATED CODE HERE: </b><input type="text" name="pwd">
+			</form>
+		</center>
+		<center>
+			<input type="button" value="Decode A New String of DNA" onClick="window.location.reload()">
+		</center>
+		<center>
+			<br>
+			<b>TIMER</b>
+			      <div class="timer">
+            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>
+        </div>
+        <div class="control">
+<!--             <button onClick="timer.start(1000)">Start</button> 
+            <button onClick="timer.stop()">Stop</button -->
+ <!--            <button onClick="timer.reset(60)">Reset</button> 
+            <button onClick="timer.mode(1)">Count up</button> 
+            <button onClick="timer.mode(0)">Count down</button> -->
+        </div>
+        <script>
+        function _timer(callback)
+{
+    var time = 0;     //  The default time of the timer
+    var mode = 1;     //    Mode: count up or count down
+    var status = 0;    //    Status: timer is running or stoped
+    var timer_id;    //    This is used by setInterval function
+    
+    // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
+    this.start = function(interval)
+    {
+        interval = (typeof(interval) !== 'undefined') ? interval : 1000;
+ 
+        if(status == 0)
+        {
+            status = 1;
+            timer_id = setInterval(function()
+            {
+                switch(mode)
+                {
+                    default:
+                    if(time)
+                    {
+                        time--;
+                        generateTime();
+                        if(typeof(callback) === 'function') callback(time);
+                    }
+                    break;
+                    
+                    case 1:
+                    if(time < 86400)
+                    {
+                        time++;
+                        generateTime();
+                        if(typeof(callback) === 'function') callback(time);
+                    }
+                    break;
+                }
+            }, interval);
+        }
+    }
+    
+    //  Same as the name, this will stop or pause the timer ex. timer.stop()
+    this.stop =  function()
+    {
+        if(status == 1)
+        {
+            status = 0;
+            clearInterval(timer_id);
+        }
+    }
+    
+    // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
+    this.reset =  function(sec)
+    {
+        sec = (typeof(sec) !== 'undefined') ? sec : 0;
+        time = sec;
+        generateTime(time);
+    }
+    
+    // Change the mode of the timer, count-up (1) or countdown (0)
+    this.mode = function(tmode)
+    {
+        mode = tmode;
+    }
+    
+    // This methode return the current value of the timer
+    this.getTime = function()
+    {
+        return time;
+    }
+    
+    // This methode return the current mode of the timer count-up (1) or countdown (0)
+    this.getMode = function()
+    {
+        return mode;
+    }
+    
+    // This methode return the status of the timer running (1) or stoped (1)
+    this.getStatus
+    {
+        return status;
+    }
+    
+    // This methode will render the time variable to hour:minute:second format
+    function generateTime()
+    {
+        var second = time % 60;
+        var minute = Math.floor(time / 60) % 60;
+        var hour = Math.floor(time / 3600) % 60;
+        
+        second = (second < 10) ? '0'+second : second;
+        minute = (minute < 10) ? '0'+minute : minute;
+        hour = (hour < 10) ? '0'+hour : hour;
+        
+        $('div.timer span.second').html(second);
+        $('div.timer span.minute').html(minute);
+        $('div.timer span.hour').html(hour);
+    }
+}
+ 
+// example use
+var timer;
+ 
+$(document).ready(function(e) 
+{
+    timer = new _timer
+    (
+        function(time)
+        {
+            if(time == 0)
+            {
+                timer.stop();
+                alert('time out');
+            }
+        }
+    );
+    timer.reset(0);
+    timer.mode(1);
+});
+</script>
+<br>
+			<center>
+		<a href = "#home" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/MENUBUTTON_zps5c08bd26.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a>
+		</center>
+		<br>
+</div>
+</div>
+
+
+
+
+<div data-role = "page" id = "transcriptionpage" onload="runGame2()" onkeydown = "keyPress(event)">
+
+		<center>
+			<img src ="decoding.png" width="500"/>
+			<br>
+		</center>
+			
+<!--<body onload="runGame2()"> -->
+		<script>
+			
+			var z = Math.floor(Math.random()*4);
+		
+		function pleasecolor(){
+			console.log(z);
+			for(var d = 33; d<36; d++){
+				var boardID = "r"+0+"c"+d;
+				z = Math.floor(Math.random()*4);
+				console.log(boardID);
+				if(z==0){
+					document.getElementById(boardID).style.background = "green";
+				}
+				if(z==1){
+					document.getElementById(boardID).style.background = "yellow";
+				}
+				if(z==2){
+					document.getElementById(boardID).style.background = "Blue";
+				}
+				if(z==3){
+					document.getElementById(boardID).style.background = "Red";
+				}
+			}
+		}
+		 	var d = 33;
+/*		function keyPress(e){
+				var boardID1 = "r"+0+"c"+d;
+				var boardID2 = "r"+0+"c"+(d+1);
+				var boardID3 = "r"+0+"c"+(d+2);
+				console.log(e.keyCode);
+				if (e.keyCode==49 && document.getElementById(boardID1).style.background == "blue" && document.getElementById(boardID2).style.background == "blue" && document.getElementById(boardID3).style.background == "blue"){
+						console.log("yes");
+						alert("Yes, the amino acid is lysine!");
+				}
+				else if (e.keyCode==49 && document.getElementById(boardID1).style.background !== "gray" && document.getElementById(boardID2).style.background !== "gray" && document.getElementById(boardID3).style.background !== "gray"){
+					console.log("no");
+					alert("No, the amino acid is not lysine!");
+				}
+			}*/
+		
+			</script>
+			<p style="text-align: center;margin-top:-20px;"><span style="color:#808080;"><span style="font-size:28px;">------------------------------------------------------------------------</span></span><br style="text-align: center;" />
+			<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;text-align:center;">
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/letterp1_zps3fde4fc5.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" />
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/letterl1_zps7edc50ca.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" />
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/tumblr_lshft8VSJ21qh0381o1_500_zpsf89889a8.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" />
+			<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/large1_zps5685100e.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:85px;height:85px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;"/></p>
+		&nbsp;</p>
+		<center>
+		<a href = "#help1"><img src = "help.png"></a>
+		</center>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<style>
+			html, body {
+			  margin: 0;
+			  padding: 10px;
+			  background: #faf8ef;
+			  color: #ffffff;
+			  font-weight: bolder;
+			}
+
+
+
+			.grid-container {
+			  position: absolute;
+			  z-index: 1; 
+			}
+
+			.grid-row {
+			  margin-bottom: 15px; 
+			}
+
+  			.grid-row:last-child {
+    			margin-bottom: 0; 
+			}	
+
+			.grid-row:after {
+				content: "";
+			    display: block;
+			    clear: both;
+			}
+
+			.grid-cell {
+			  width: 35px;
+			  height: 35px;
+			  margin-right: 8px;
+			  float: left;
+			  border-radius: 3px;
+			  text-align: center;
+			  background:#C8CACB; 
+
+			}
+
+			.grid-cell:last-child {
+			    margin-right: 0; 
+			}
+
+			.game2 {
+				  margin-top: -210px;
+				  position: relative;
+				  padding: 8px;
+				  cursor: default;
+				  background: #494E53;
+				  border-radius: 6px;
+				  width: 143px;
+				  height: 51px;
+				  -webkit-box-sizing: border-box;
+				  -moz-box-sizing: border-box;
+				  box-sizing: border-box; 
+			}
+		</style>
+			<div align="center">
+			<div class="game2">
+			<div class="grid-container">
+		        <div class="grid-row">
+		          <div class="grid-cell" id = "r0c33"><center><font color = "black">1</font></center><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c34"><font color = "black">1</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c35"><font color = "black">1</font><script>pleasecolor();</script></div>
+		         <!--  <div class="grid-cell" id = "r0c36"><font color = "black">2</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c37"><font color = "black">2</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c38"><font color = "black">2</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c39"><font color = "black">3</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c40"><font color = "black">3</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c41"><font color = "black">3</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c42"><font color = "black">4</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c43"><font color = "black">4</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c44"><font color = "black">4</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c45"><font color = "black">5</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c46"><font color = "black">5</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c47"><font color = "black">5</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c48"><font color = "black">6</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c49"><font color = "black">6</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c50"><font color = "black">6</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c51"><font color = "black">7</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c52"><font color = "black">7</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c53"><font color = "black">7</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c54"><font color = "black">8</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c55"><font color = "black">8</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c56"><font color = "black">8</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c57"><font color = "black">9</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c58"><font color = "black">9</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c59"><font color = "black">9</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c60"><font color = "black">10</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c61"><font color = "black">10</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c62"><font color = "black">10</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c63"><font color = "black">11</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c64"><font color = "black">11</font><script>pleasecolor();</script></div>
+		          <div class="grid-cell" id = "r0c65"><font color = "black">11</font><script>pleasecolor();</script></div> -->
+		        </div>
+	      	</div>
+	      </div>
+	     </div>
+	     <center>
+	     <br>
+		<br>
+		<br>
+	     <img src="newdecoder.jpg" width="200"/>
+	 	 </center>
+	 	 <center>
+	 	 	<img src="key2.png"/ width="200"/>
+	      	<br>
+	      	<br>
+	      	Which Amino Acid is Shown Above?
+		</center>
+<!-- 	 	 <center>
+	 	 	Which Amino Acid is Highlighted by Codon Number  <select name = "Codon Number" id = "options" data-native-menu = "false">
+	 	 		<option id = "no">Pick One</option>
+				<option id = "a">1</option>
+				<option id = "b">2</option>
+				<option id = "c">3</option>
+				<option id = "d">4</option>
+				<option id = "e">5</option>
+				<option id = "f">6</option>
+				<option id = "g">7</option>
+				<option id = "h">8</option>
+				<option id = "i">9</option>
+				<option id = "j">10</option>
+				<option id = "k">11</option>
+				<input type = "button" value = "Submit Codon Number" data-theme = "b" style="height:10px; width:10px"/>
+				<button onclick="getElementById('hidden-div').style.display = 'block'; this.style.display = 'none'" value = "Submit" data-theme="b" style="height:50px; width:50px">Submit</button>
+		</select>
+	 	 </center> -->
+<form>
+		<b>ENTER AMINO ACID HERE: </b><input type="number" name="here">
+		</form>
+		<br>
+		<center>
+		<a href = "#home" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/MENUBUTTON_zps5c08bd26.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a>
+		</center>
+		<br>
+
+
+	<!--</body>-->
+
+		
+
+
+<!-- 		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:33%;">
+		<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;text-align:center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/dna_zps2116a135.png" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" /><img alt="" src="http://data2.whicdn.com/images/127704747/large.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" /><img alt="" src="http://data3.whicdn.com/images/4697277/large.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;" /><img alt="" src="http://data3.whicdn.com/images/97255708/large.jpg" style="font-family:calibri;font-size:12px;line-height:11px;text-align:center;color:rgb(204,204,204);letter-spacing:-1px;text-transform:uppercase;width:75px;height:75px;margin:0px 10px -10px;border-width:1px;border-style:solid;padding:4px;opacity:.8;border-top-left-radius:110px;border-top-right-radius:110px;border-bottom-right-radius:110px;border-bottom-left-radius:110px;background-color:transparent;"/></p>
+			<div>&nbsp;</div>
+		<div style="margin-top:-10px;margin:0px 0px -10px;padding:0px;border:0px;font:inherit;vertical-align:baseline;text-align:justify;"><span style="line-height:0;vertical-align:super;font-size:10px;letter-spacing:3px;font-family:'times new roman', times, serif;color:rgb(27,4,12);">&nbsp;&nbsp;</span></div>
+		<p style="text-align:justify;margin:0px 0px 0px -10px;"><span style="color:#000000;"><span style="font-family:courier new;"><span style="font-size:11px;letter-spacing:1px;line-height:13px;">Evolution is the change in the inherited characteristics of biological populations over successive generations. Evolutionary processes give rise to diversity at every level of biological organisation, including species, individual organisms and molecules such as DNA and proteins. DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms. Nearly every cell in a body has the same DNA. They are the key to unlocking the past, present, and future.</span></span></span></p>
+		<p><span style="letter-spacing: -1px; text-align: center; text-transform: uppercase; line-height: 1.6; color: rgb(204, 204, 204); background-color: transparent;">
+
+		<a href = "#play" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/learn_zpsa9646708.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a></span>
+
+		<img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/play_zpsb591c676.png" style="letter-spacing: -1px; text-align: center; text-transform: uppercase; line-height: 1.6; color: rgb(204, 204, 204); width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px; background-color: transparent;"/></p>
+		</center>
+
+
+	</div>
+</div> -->
+</div>
+<!--</div>
+</div>
+</div>
+-->
+<div data-role = "page" id = "learn">
+	<style>
+	<html, body {
+			.fade {
+	   			opacity: 1;
+	    		transition: opacity .25s ease-in-out;
+			    -moz-transition: opacity .25s ease-in-out;
+			    -webkit-transition: opacity .25s ease-in-out;
+			}
+
+			.fade:hover {
+			    opacity: 0.5;
+			}
+	</style>
+		<center>
+			<img src = "decoding.png" width="500"/>
+			<br>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:70%;">
+
+		<p style="text-align: center;margin-top:-20px;"><span style="color:#808080;"><span style="font-size:28px;">------------------------------------------------------------------------</span></span><br style="text-align: center;" />
+
+			<p><br style="text-align: center;" />
+			<span style="font-family:courier new;">
+				<span style="text-align: center; font-size: 72px; line-height: 10px;">LEARN ABOUT DNA</span><br style="text-align: center;" />
+				<span style="text-align: center; color: rgb(255, 255, 255); font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span><span style="text-align: center; font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;"><span style="background-color: rgb(153, 153, 255);"><font color="#ffd700">&nbsp;</font><font color="#ffffff">slow and steady knowledge&nbsp;</font></span></span></span></span></p>
+
+			<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;">&nbsp;</p>
+
+			<table border="0" cellpadding="3" cellspacing="3" style="text-align: center;" width="500">
+				<tbody>
+					<tr>
+						<td>
+						<p class="history"><a href = "#history"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/large1_zps741016f2.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; text-align: center; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 170px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 3px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px; height: 130px; background-color: transparent;" /></a></p>
+						</td>
+						<td style="text-align: left;">
+						<p class="fade" style="line-height: 15px; text-align: center;"><span style="font-family: 'courier new';"><span style="font-size: 22px;">HISTORY AND INDEPTH ANALYSIS OF DNA</span></span></p>
+
+						<p class="history" style="line-height: 15px; text-align: justify;"><span style="font-family: 'courier new';">a short and easy-to-understand explanation of DNA and its history made for scholars of all ages.</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="0" cellpadding="3" cellspacing="3" style="text-align: center;" width="500">
+				<tbody>
+					<tr>
+						<td>
+						<p class="darwin"><a href ="#darwin"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/large4_zps92155aa9.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; text-align: center; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 170px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 3px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px; height: 130px; background-color: transparent;" /></a></p>
+						</td>
+						<td style="text-align: left;">
+						<p class="sup" style="line-height: 15px; text-align: center;"><span style="font-family: 'courier new';"><span style="font-size: 22px;">THE MAN CHARLES DARWIN</span></span></p>
+
+						<p class="darwin" style="line-height: 15px; text-align: justify;"><span style="font-family: 'courier new';">a short and easy-to-understand explanation of Charles Darwin made for scholars of all ages.</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="0" cellpadding="3" cellspacing="3" style="text-align: center;" width="500">
+				<tbody>
+					<tr>
+						<td>
+						<p class="dna"><a href ="#dna"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/large3_zpsaed97b8f.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; text-align: center; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 170px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 3px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px; height: 130px; background-color: transparent;" /></a></p>
+						</td>
+						<td style="text-align: left;">
+						<p class="meepster" style="line-height: 15px; text-align: center;"><span style="font-family: 'courier new';"><span style="font-size: 22px;">HOW DNA ACTUALLY WORKS</span></span></p>
+
+						<p class="dna" style="line-height: 15px; text-align: justify;"><span style="font-family: 'courier new';">a short and easy-to-understand explanation of how DNA works made for scholars of all ages.</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+
+<p>&nbsp;</p>
+<!-- 
+<p>&nbsp;</p>
+
+<p>&nbsp;</p> -->
+<center>
+		<a href = "#home" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/MENUBUTTON_zps5c08bd26.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a>
+		</center>
+		<br>
+
+
+<!-- 
+<p style="font-family:calibri;font-size:12px;color:rgb(68,68,68);line-height:11px;margin:0px;text-align:center;"><img alt="" src="menu.png;" /></p> -->
+		</center>
+
+
+
+		</div>
+	</div>
+	<!-- <div data-role = "footer">
+			<center>
+			<font face="gabriola" color="0F6DA3" font size="3">
+			Go back to <a href="#home">Menu</a></font>
+			</center>
+	</div> -->
+</div>
+
+<div data-role = "page" id = "history">
+		<center>
+			<img src = "decoding.png" width="500"/>
+			<br>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:70%;">
+
+		<p style="text-align: center;margin-top:-20px;"><span style="color:#808080;"><span style="font-size:28px;">------------------------------------------------------------------------</span></span><br style="text-align: center;" />
+
+			<p><br style="text-align: center;" />
+			<span style="font-family:courier new;">
+				<span style="text-align: center; font-size: 72px; line-height: 10px; letter-spacing:-5px">HISTORY & ANALYSIS</span><br style="text-align: center;" />
+				<!--<span style="text-align: center; color: rgb(255, 255, 255); font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span><span style="text-align: center; font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;"><span style="background-color: rgb(153, 153, 255);"><font color="#ffd700">&nbsp;</font><font color="#ffffff">slow and steady knowledge&nbsp;</font></span></span></span></span></p>-->
+		</center>
+
+			<div style="text-align:center;">
+				<div style="margin:auto;text-align:center;"><img alt="" src="http://data2.whicdn.com/images/7937188/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; text-align: center; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 174px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 150px; border-top-right-radius: 3px; border-bottom-right-radius: 150px; border-bottom-left-radius: 150px; height: 130px; background-color: transparent;" /><img alt="" src="http://data1.whicdn.com/images/790980/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 178px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; height: 130px; background-color: transparent;" /><img alt="" src="http://data1.whicdn.com/images/14271707/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 174px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 3px; border-top-right-radius: 150px; border-bottom-right-radius: 150px; border-bottom-left-radius: 150px; height: 130px; background-color: transparent;" />
+			</div>
+			</div>
+
+			<p style="margin:auto;width:95%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:center;">&nbsp;</p>
+
+			<div style="text-align:center;">
+			<table style="margin:auto;width:650px;padding:0px;height:auto;">
+				<tbody align="center" style="padding:0px;">
+					<tr align="center" style="padding:0px;">
+						<td style="background-color:#FFFFFF;padding-top:0px;padding-bottom:0px;border-left:10px solid #B8B8FF;border-right:10px solid #B8B8FF;">
+						<p style="margin:auto;width:100%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:justify;">&nbsp;</p>
+
+						<p style="margin: auto; width: 95%; line-height: 16px; font-family: calibri, helvetica, arial, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size:12px;"><span style="font-family:courier new;">DNA is used to prove individual identity and also someones genetic relationships. Back in 1985, the first genetic "fingerprint" was a miracle of science. Today, DNA analysis is standard practice for defining paternity or maternity, predisposition to disease, embryonic health, criminal guilt or innocence, and so on. <br>
+						&nbsp;&nbsp;&nbsp; Traditional genealogy follows a chain of genetic links from generation to generation. If a link is erased, DNA testing can sometimes restore the bond.For example, between 1976 and 1983, Argentina's ruling junta 'disappeared' 20,000 people - including 270 women who gave birth before dying. Desperate to find lost grandchildren, the mothers of the disappeared appealed to scientists, asking for a genetic test that didn't need parental DNA. As of May 2003, the grandmothers' DNA project has found 74 of the disappeared children (now in their late 20s).
+						<p style="margin:auto;width:95%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:justify;">&nbsp;</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<br>
+		<center>
+		<a href = "#home" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/MENUBUTTON_zps5c08bd26.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a>
+		</center>
+		<br>
+
+
+		</div>
+		<!-- <div data-role = "footer">
+			<center>
+			<font face="gabriola" color="0F6DA3" font size="3">
+			Go back to <a href="#home">Menu</a><br>Go back to <a href="#learn">Learn</a></font>
+			</center>
+	</div> -->
+</div>
+
+<div data-role = "page" id = "darwin">
+		<center>
+			<img src = "decoding.png" width="500"/>
+			<br>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:70%;">
+
+		<p style="text-align: center;margin-top:-20px;"><span style="color:#808080;"><span style="font-size:28px;">------------------------------------------------------------------------</span></span><br style="text-align: center;" />
+
+			<p><br style="text-align: center;" />
+			<span style="font-family:courier new;">
+				<span style="text-align: center; font-size: 72px; line-height: 10px; letter-spacing:-5px">CHARLES DARWIN</span><br style="text-align: center;" />
+				<!--<span style="text-align: center; color: rgb(255, 255, 255); font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span><span style="text-align: center; font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;"><span style="background-color: rgb(153, 153, 255);"><font color="#ffd700">&nbsp;</font><font color="#ffffff">slow and steady knowledge&nbsp;</font></span></span></span></span></p>-->
+		</center>
+
+			<div style="text-align:center;">
+				<div style="margin:auto;text-align:center;"><img alt="" src="http://data2.whicdn.com/images/7937188/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; text-align: center; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 174px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 150px; border-top-right-radius: 3px; border-bottom-right-radius: 150px; border-bottom-left-radius: 150px; height: 130px; background-color: transparent;" /><img alt="" src="http://data1.whicdn.com/images/790980/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 178px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; height: 130px; background-color: transparent;" /><img alt="" src="http://data1.whicdn.com/images/14271707/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 174px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 3px; border-top-right-radius: 150px; border-bottom-right-radius: 150px; border-bottom-left-radius: 150px; height: 130px; background-color: transparent;" />
+			</div>
+			</div>
+
+			<p style="margin:auto;width:95%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:center;">&nbsp;</p>
+
+			<div style="text-align:center;">
+			<table style="margin:auto;width:650px;padding:0px;height:auto;">
+				<tbody align="center" style="padding:0px;">
+					<tr align="center" style="padding:0px;">
+						<td style="background-color:#FFFFFF;padding-top:0px;padding-bottom:0px;border-left:10px solid #B8B8FF;border-right:10px solid #B8B8FF;">
+						<p style="margin:auto;width:100%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:justify;">&nbsp;</p>
+
+						<p style="margin: auto; width: 95%; line-height: 16px; font-family: calibri, helvetica, arial, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size:12px;"><span style="font-family:courier new;">Charles Darwin was a Naturalist that was born in Shrewsbury, England on February 12th, 1809 and died in 1882. He discovered the process of evolution. Darwin published his theory of evolution with compelling evidence in his 1859 book On the Origin of Species, overcoming scientific rejection of earlier concepts of transmutation of species.By the 1870s the scientific community and much of the general public had accepted evolution as a fact. However, many favoured competing explanations and it was not until the emergence of the modern evolutionary synthesis from the 1930s to the 1950s that a broad consensus developed in which natural selection was the basic mechanism of evolution. In modified form, Darwin's scientific discovery is the unifying theory of the life sciences, explaining the diversity of life.<br>
+						&nbsp;&nbsp;&nbsp;Puzzled by the geographical distribution of wildlife and fossils he collected on the voyage, Darwin began detailed investigations and in 1838 conceived his theory of natural selection.Although he discussed his ideas with several naturalists, he needed time for extensive research and his geological work had priority. He was writing up his theory in 1858 when Alfred Russel Wallace sent him an essay which described the same idea, prompting immediate joint publication of both of their theories. Darwin's work established evolutionary descent with modification as the dominant scientific explanation of diversification in nature. In 1871 he examined human evolution and sexual selection in The Descent of Man, and Selection in Relation to Sex, followed by The Expression of the Emotions in Man and Animals. His research on plants was published in a series of books, and in his final book, he examined earthworms and their effect on soil.<br>
+						&nbsp;&nbsp;&nbsp;Darwin became internationally famous, and his pre-eminence as a scientist was honoured by burial in Westminster Abbey.Darwin has been described as one of the most influential figures in human history.
+						<p style="margin:auto;width:95%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:justify;">&nbsp;</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<br>
+		<center>
+		<a href = "#home" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/MENUBUTTON_zps5c08bd26.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a>
+		</center>
+		<br>
+
+
+		</div>
+		<!-- <div data-role = "footer">
+			<center>
+			<font face="gabriola" color="0F6DA3" font size="3">
+			Go back to <a href="#home">Menu</a><br>Go back to <a href="#learn">Learn</a></font>
+			</center>
+	</div> -->
+	<!-- </div> -->
+<div data-role = "page" id = "dna">
+		<center>
+			<img src = "decoding.png" width="500"/>
+			<br>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:70%;">
+
+		<p style="text-align: center;margin-top:-20px;"><span style="color:#808080;"><span style="font-size:28px;">------------------------------------------------------------------------</span></span><br style="text-align: center;" />
+
+			<p><br style="text-align: center;" />
+			<span style="font-family:courier new;">
+				<span style="text-align: center; font-size: 72px; line-height: 10px; letter-spacing:-5px">HOW DNA WORKS</span><br style="text-align: center;" />
+				<!--<span style="text-align: center; color: rgb(255, 255, 255); font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span><span style="text-align: center; font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;"><span style="background-color: rgb(153, 153, 255);"><font color="#ffd700">&nbsp;</font><font color="#ffffff">slow and steady knowledge&nbsp;</font></span></span></span></span></p>-->
+		</center>
+
+			<div style="text-align:center;">
+				<div style="margin:auto;text-align:center;"><img alt="" src="http://data2.whicdn.com/images/7937188/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; text-align: center; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 174px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 150px; border-top-right-radius: 3px; border-bottom-right-radius: 150px; border-bottom-left-radius: 150px; height: 130px; background-color: transparent;" /><img alt="" src="http://data1.whicdn.com/images/790980/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 178px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; height: 130px; background-color: transparent;" /><img alt="" src="http://data1.whicdn.com/images/14271707/large.jpg" style="font-family: calibri; font-size: 12px; line-height: 11px; color: rgb(204, 204, 204); letter-spacing: -1px; text-transform: uppercase; width: 174px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 3px; border-top-right-radius: 150px; border-bottom-right-radius: 150px; border-bottom-left-radius: 150px; height: 130px; background-color: transparent;" />
+			</div>
+			</div>
+
+			<p style="margin:auto;width:95%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:center;">&nbsp;</p>
+
+			<div style="text-align:center;">
+			<table style="margin:auto;width:650px;padding:0px;height:auto;">
+				<tbody align="center" style="padding:0px;">
+					<tr align="center" style="padding:0px;">
+						<td style="background-color:#FFFFFF;padding-top:0px;padding-bottom:0px;border-left:10px solid #B8B8FF;border-right:10px solid #B8B8FF;">
+						<p style="margin:auto;width:100%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:justify;">&nbsp;</p>
+
+						<p style="margin: auto; width: 95%; line-height: 16px; font-family: calibri, helvetica, arial, sans-serif; font-size: 11px; text-align: justify;"><span style="font-size:12px;"><span style="font-family:courier new;">&nbsp;&nbsp;&nbsp;DNA is short for Deoxyriboncleic acid and was discovered by Swiss Physiological chemist Friedrich Miescher. It is a self-replicating macromolecule that is the main component of chromosomes and its the material that transfers genetic characteristics in all life forms. Its made up of 2 tightly coiled chromotids shaped in a ladder form with 4 main bases of nucleotides (Adenine,Thymine, Cytosine, and Guanine) in between. These bases are where the genetic information of DNA are encoded in the sequence of the bases.<br>
+						&nbsp;&nbsp;&nbsp;The nucleotides are represented by the first letter of their name in most cases and are usually refrerred to as base pairs.
+						In the base pairs Adenine and Thymine are always paired and Cytosine and Guanine are always paired together. DNA is made up of many nucleotides in many combinations and every 3 letters of nucleotides in a DNA strand makes a codon. (Ex. of a codon: ATG,CTG,and CAU)<br>
+						&nbsp;&nbsp;&nbsp;Inside of each string of DNA are instructions called genes. The gene tells a cell how to make specific proteins and the
+						proteins are used to tell the cell what specific functions to make such as growing and surviving.
+						<p style="margin:auto;width:95%;line-height:16px;font-family:calibri, helvetica, arial, sans-serif;font-size:11px;color:rgb(156,156,156);text-align:justify;">&nbsp;</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<br>
+
+		<center>
+		<a href = "#home" onclick="timer.reset(0);" onclick="runGame();"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/MENUBUTTON_zps5c08bd26.png" style="width: 200px; height: 45px; margin: 0px 10px -10px; border-width: 1px; border-style: solid; padding: 4px; opacity: 0.8; border-top-left-radius: 110px; border-top-right-radius: 110px; border-bottom-right-radius: 110px; border-bottom-left-radius: 110px;" /></a>
+		</center>
+		<br>
+		</div>
+
+		
+
+
+		
+	<!-- 	<div data-role = "footer">
+			<center>
+			<font face="gabriola" color="0F6DA3" font size="3">
+			Go back to <a href="#home">Menu</a><br>Go back to <a href="#learn">Learn</a></font>
+			</center>
+	</div>
+	</div> -->
+<div data-role = "page" id = "help1">
+		<center>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:50%;">
+			<div>&nbsp;</div>
+		<span style="font-family:courier new;"><span style="text-align: center; font-size: 72px; line-height: 10px;">HOW TO PLAY</span><br style="text-align: center;" />
+			<span style="text-align: center; color: rgb(255, 255, 255); font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></span><span style="text-align: center; font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;"><span style="background-color: rgb(153, 153, 255);"><font color="#ffd700">&nbsp;</font><font color="#ffffff">what in the world&nbsp;</font></span></span></span></span></p>
+		<div style="margin-top:-10px;margin:0px 0px -10px;padding:0px;border:0px;font:inherit;vertical-align:baseline;text-align:justify;"><span style="line-height:0;vertical-align:super;font-size:10px;letter-spacing:3px;font-family:'times new roman', times, serif;color:rgb(27,4,12);">&nbsp;&nbsp;</span></div>
+		</center>
+		<center>
+			<p style="text-align: center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/01_zps12aad138.png" style="width: 416px; height: 475px;" /></p>
+	<!-- 		<br> -->
+		<!-- 	<br>
+			<br> -->
+
+			<p style="text-align: center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/02_zps975695e6.png" style="width: 851px; height: 189px;" /></p>
+		</center>
+
+		<!-- 	<br>
+			<br>
+			<br> -->
+		<center>
+
+     <!--   <br>
+       <br>
+       <br>
+       <br> -->
+       <a href = "#transcriptionpage"><p style="text-align: center;"><strong><span style="font-size:22px;"><span style="font-family:courier new;">BACK TO THE GAME</span></span></strong></p><a>
+
+
+		</center>
+		</div>
+	</div>
+
+<div data-role = "page" id = "help2">
+		<center>
+		<div data-role = "content">
+			<div id="column1" style="float:center; margin:0; width:50%;">
+			<div>&nbsp;</div>
+		<span style="font-family:courier new;"><span style="text-align: center; font-size: 72px; line-height: 10px;">HOW TO PLAY</span><br style="text-align: center;" />
+			<span style="text-align: center; color: rgb(255, 255, 255); font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></span><span style="text-align: center; font-size: 72px; line-height: 10px; margin-top: 40px;"><span style="font-size: 24px; margin-top: 40px;"><span style="background-color: rgb(153, 153, 255);"><font color="#ffd700">&nbsp;</font><font color="#ffffff">what in the world&nbsp;</font></span></span></span></span></p>
+		<div style="margin-top:-10px;margin:0px 0px -10px;padding:0px;border:0px;font:inherit;vertical-align:baseline;text-align:justify;"><span style="line-height:0;vertical-align:super;font-size:10px;letter-spacing:3px;font-family:'times new roman', times, serif;color:rgb(27,4,12);">&nbsp;&nbsp;</span></div>
+		</center>
+		<center>
+			<p style="text-align: center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/final1_zps8e89cd0c.png" style="width: 950px; height: 313px;" /></p>
+			<br>
+			<br>
+			<br>
+
+			<p style="text-align: center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/final2_zpsc5e10539.png" style="width: 950px; height: 313px;" /></p>
+			<br>
+			<br>
+			<br>
+
+			<p style="text-align: center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/enter_zps12caf5d2.png" style="width: 950px; height: 160px;" /></p>
+		</center>
+
+			<br>
+			<br>
+			<br>
+		<center>
+
+
+	<script type = "text/javascript">
+
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 2000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/finalphase1_zps27cb7afd.png";
+          images[1] = "http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/finalphase2_zpseefc8356.png";
+          images[2] = "http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/finalphase3_zps3c002418.png";
+
+      </script>
+      <script>
+      startTimer();
+      </script>
+  <!--  	<body onload = "startTimer()"> -->
+
+       <img id="img" src="startpicture.jpg">
+    <br>
+	<br>
+	<br>
+	<br>
+    <center>
+		<p style="text-align: center;"><img alt="" src="http://i696.photobucket.com/albums/vv325/strawberrysmoothie98/decoding%20dna/final3_zps65454fb4.png" style="width: 990px; height: 300px;" /></p>
+		<br>
+		<br>
+		<br>
+	</center>
+
+       <br>
+       <br>
+       <br>
+       <br>
+       <a href = "#play"><p style="text-align: center;"><strong><span style="font-size:22px;"><span style="font-family:courier new;">BACK TO THE GAME</span></span></strong></p><a>
+
+
+		</center>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
